@@ -1,0 +1,21 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+.bg{
+	
+	-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #7af2ff 0.0%, #ffffff 100.0%)
+
+}
+
+.color{
+	-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 5.0% , center 50.0% 50.0%, radius 100.0%, #14c3a2 0.0%, #000000 100.0%)
+}
+
+.buttonColo{
+	-fx-background-color: #b8fd99;
+}
+
+.fonte{
+	-fx-font-family: 'Noto Serif', serif;
+}

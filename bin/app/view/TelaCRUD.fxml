@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" styleClass="color" stylesheets="@../app/application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="272.0" prefWidth="1000.0" spacing="30.0">
+               <children>
+                  <ImageView fx:id="Icon">
+                     <image>
+                        <Image url="@../resources/Selecao.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="Titulo" styleClass="fonte" stylesheets="@../app/application.css" text="Seleção">
+                     <font>
+                        <Font name="Serif Regular" size="100.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="442.0" prefWidth="1000.0" spacing="20.0">
+               <children>
+                  <Button fx:id="ButtoInserir" mnemonicParsing="false" onAction="#ActionInserir" prefHeight="50.0" prefWidth="300.0" styleClass="buttonColo" stylesheets="@../app/application.css" text="Inserir ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Inserir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonEditar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#ActionEditar" prefHeight="50.0" prefWidth="300.0" styleClass="buttonColo" stylesheets="@../app/application.css" text="Editar">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonListar" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#ActionListar" prefHeight="50.0" prefWidth="300.0" styleClass="buttonColo" stylesheets="@../app/application.css" text="Listar">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Listar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonApagar" layoutX="10.0" layoutY="112.0" mnemonicParsing="false" onAction="#ActionApagar" prefHeight="50.0" prefWidth="300.0" styleClass="buttonColo" stylesheets="@../app/application.css" text="Apagar">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Apagar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonVoltar" layoutX="360.0" layoutY="325.0" mnemonicParsing="false" onAction="#ActionVoltar" prefHeight="50.0" prefWidth="300.0" styleClass="buttonColo" stylesheets="@../app/application.css" text="Voltar">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../resources/Voltar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

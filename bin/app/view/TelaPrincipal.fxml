@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" styleClass="color" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.control.TelaPrincipalController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1000.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" translateY="-25.0">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="64.0">
+                     <image>
+                        <Image url="@../resources/Bola%2064x.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="SysCopa 3.0">
+                     <font>
+                        <Font size="64.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Group>
+               <children>
+                  <Button fx:id="ButtonSelecao" mnemonicParsing="false" onAction="#ActionButtonSelecao" prefHeight="60.0" prefWidth="300.0" styleClass="buttonColo" text=" Gerenciamento de Selecao">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../resources/Selecao%2064x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonJogador" layoutY="80.0" mnemonicParsing="false" onAction="#ActionButtonJogador" prefHeight="60.0" prefWidth="300.0" styleClass="buttonColo" text=" Gerenciamento de Jogador">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../resources/Jogador%2064x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonArbitro" layoutY="160.0" mnemonicParsing="false" onAction="#ActionButtonArbitro" prefHeight="60.0" prefWidth="300.0" styleClass="buttonColo" text=" Gerenciamento de Arbitro">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../resources/Arbitro%2064x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonTecnico" layoutY="240.0" mnemonicParsing="false" onAction="#ActionButtonTecnico" prefHeight="60.0" prefWidth="300.0" styleClass="buttonColo" text=" Gerenciamento de Tecnico">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../resources/Tecnico%2064x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonGrupos" layoutY="320.0" mnemonicParsing="false" onAction="#ActionButtonGrupo" prefHeight="60.0" prefWidth="300.0" styleClass="buttonColo" text=" Gerenciamento de Grupos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../resources/Grupo%2064x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonPartida" layoutY="400.0" mnemonicParsing="false" onAction="#ActionButtonPartida" prefHeight="60.0" prefWidth="300.0" styleClass="buttonColo" text=" Gerenciamento de Partida">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../resources/Partida%2064x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ButtonPesquisa" layoutY="480.0" mnemonicParsing="false" onAction="#ActionButtonPquisa" prefHeight="60.0" prefWidth="300.0" styleClass="buttonColo" text=" Pesquisa Geral">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0">
+                           <image>
+                              <Image url="@../resources/Pesquisar%2064x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Group>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
