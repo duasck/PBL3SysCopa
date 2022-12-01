@@ -268,7 +268,9 @@ public class SelecaoDao {
 	public void apagarJogador(Jogador jogador) {
 		Selecao selecao = buscaNome(jogador.getSelecao());
 		excluir(selecao);
-		selecao.getJogadores().remove(jogador);
+		if(selecao.getJogadores().contains(jogador)) {
+			selecao.getJogadores().remove(jogador);
+		}
 		create(selecao);
 	}
 

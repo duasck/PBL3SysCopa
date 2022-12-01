@@ -47,7 +47,6 @@ public class Main extends Application {
 		try {
 			carregarDados();
 			stage = primaryStage;
-
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("SysCopa");
 			Image iconApp = new Image(getClass().getResourceAsStream("resources/Icone.png"));

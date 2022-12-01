@@ -194,7 +194,7 @@ public class SelecaoController {
 		AnchorPane page = (AnchorPane) loader.load();
 		Stage telaCadastro = new Stage();
 		telaCadastro.setTitle("Cadastro Selecao");
-		Image iconApp = new Image(getClass().getResourceAsStream("/app/resources/JogadorIcon.png"));
+		Image iconApp = new Image(getClass().getResourceAsStream("/app/resources/Selecao300x.png"));
 		telaCadastro.getIcons().add(iconApp);
 		Scene scene = new Scene(page);
 		telaCadastro.setScene(scene);

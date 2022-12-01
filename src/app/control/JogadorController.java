@@ -116,10 +116,16 @@ public class JogadorController {
 		boolean confirmou = cadastrarJogador(jogador);
 		if (confirmou) {
 			jogadores = Main.getJogadores();
+			selecoes = Main.getSelecoes();
+			if(selecoes.existe(jogador.getSelecao())) {
+				Selecao editar = selecoes.buscaNome(jogador.getSelecao());
+				selecoes.excluir(editar);
+				editar.getJogadores().add(jogador);
+				selecoes.create(editar);
+			}
 			jogadores.create(jogador);
 			carregarTabela();
 		}
-
 	}
 
 	@FXML
@@ -227,7 +233,7 @@ public class JogadorController {
 		AnchorPane page = (AnchorPane) loader.load();
 		Stage telaCadastro = new Stage();
 		telaCadastro.setTitle("Cadastro Jogador");
-		Image iconApp = new Image(getClass().getResourceAsStream("/app/resources/JogadorIcon.png"));
+		Image iconApp = new Image(getClass().getResourceAsStream("/app/resources/Jogador300x.png"));
 		telaCadastro.getIcons().add(iconApp);
 		Scene scene = new Scene(page);
 		telaCadastro.setScene(scene);
@@ -245,7 +251,7 @@ public class JogadorController {
 		AnchorPane page = (AnchorPane) loader.load();
 		Stage telaCadastro = new Stage();
 		telaCadastro.setTitle("Cadastro Jogador");
-		Image iconApp = new Image(getClass().getResourceAsStream("/app/resources/JogadorIcon.png"));
+		Image iconApp = new Image(getClass().getResourceAsStream("/app/resources/Jogador300x.png"));
 		telaCadastro.getIcons().add(iconApp);
 		Scene scene = new Scene(page);
 		telaCadastro.setScene(scene);
