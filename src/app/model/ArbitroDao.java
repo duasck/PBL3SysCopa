@@ -10,6 +10,13 @@ public class ArbitroDao {
 		arbitros = new ArrayList<>();
 	}
 
+	public List<Arbitro> getArbitros() {
+		return arbitros;
+	}
+
+	public void setArbitros(List<Arbitro> arbitros) {
+		this.arbitros = arbitros;
+	}
 	/**
 	 * Método para adicionar/criar um árbitro na lista de árbitros
 	 * 

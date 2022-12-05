@@ -33,10 +33,10 @@ public class Arbitro {
 		return nacionalidade;
 	}
 
-	@Override
-	public boolean equals(Object a) {
-		return ((Arbitro) a).nome.equals(this.nome) ? true : false;
-	}
+//	@Override
+//	public boolean equals(Object a) {
+//		return ((Arbitro) a).nome.equals(this.nome) ? true : false;
+//	}
 
 	@Override
 	public String toString() {

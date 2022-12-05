@@ -72,8 +72,8 @@
                      <children>
                         <GridPane prefHeight="382.0" prefWidth="496.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
                           <columnConstraints>
-                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="160.0" />
-                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="306.0" />
+                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="169.0" />
+                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="347.0" />
                           </columnConstraints>
                           <rowConstraints>
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -126,42 +126,42 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="nomeFix" layoutX="310.0" layoutY="94.0" text="Nome :" GridPane.rowIndex="1">
+                              <Label fx:id="nomeFix" layoutX="310.0" layoutY="94.0" text="Nome" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="numeroFix" layoutX="302.0" layoutY="159.0" text="Número :" GridPane.rowIndex="2">
+                              <Label fx:id="numeroFix" layoutX="302.0" layoutY="159.0" text="Número" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="posicaoFix" layoutX="304.0" layoutY="223.0" text="Posição :" GridPane.rowIndex="3">
+                              <Label fx:id="posicaoFix" layoutX="304.0" layoutY="223.0" text="Posição" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="selecaoFix" layoutX="304.0" layoutY="287.0" text="Seleção :" GridPane.rowIndex="4">
+                              <Label fx:id="selecaoFix" layoutX="304.0" layoutY="287.0" text="Seleção" GridPane.rowIndex="4">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="codigoFix" layoutX="303.0" layoutY="29.0" text="Código :">
+                              <Label fx:id="codigoFix" layoutX="303.0" layoutY="29.0" text="Código">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="golsFix" layoutX="276.0" layoutY="351.0" text="Gols Marcados :" GridPane.rowIndex="5">
+                              <Label fx:id="golsFix" layoutX="276.0" layoutY="351.0" text="Gols Marcados" GridPane.rowIndex="5">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="cartaoAmareloFix" layoutX="272.0" layoutY="415.0" text="Cartão Amarelo :" GridPane.rowIndex="6">
+                              <Label fx:id="cartaoAmareloFix" layoutX="272.0" layoutY="415.0" text="Cartão Amarelo" GridPane.rowIndex="6">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="cartaoVermelhoFix" layoutX="267.0" layoutY="479.0" text="Cartão Vermelho :" GridPane.rowIndex="7">
+                              <Label fx:id="cartaoVermelhoFix" layoutX="267.0" layoutY="479.0" text="Cartão Vermelho" GridPane.rowIndex="7">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -226,5 +226,14 @@
             </HBox>
          </children>
       </VBox>
+      <Button fx:id="buttonAtt" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionAtt" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../resources/atualizar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

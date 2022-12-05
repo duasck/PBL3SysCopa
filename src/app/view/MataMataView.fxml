@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../resources/FaseEliminatoria.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="617.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew1g" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="32.0" layoutY="7.0" maxHeight="56.0" maxWidth="80.0" mnemonicParsing="false" onAction="#ation" prefHeight="56.0" prefWidth="80.0">
+         <graphic>
+            <ImageView fx:id="imageVIew1a" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button fx:id="button" alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="109.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2b" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="210.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew1c" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="312.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2d" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="414.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew1e" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="515.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2f" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="719.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2h" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="123.0" layoutY="667.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC4" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="123.0" layoutY="463.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC3" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="120.0" layoutY="261.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC2" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="209.0" layoutY="161.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorB1" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="121.0" layoutY="57.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC1" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="209.0" layoutY="565.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorB2" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="7.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew1b" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="109.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2a" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="211.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew1d" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="312.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2c" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="414.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew1f" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="516.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2e" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="617.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew1h" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="875.0" layoutY="719.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIew2g" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="785.0" layoutY="667.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC8" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="785.0" layoutY="463.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC7" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="786.0" layoutY="262.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC6" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="786.0" layoutY="58.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorC5" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="697.0" layoutY="161.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorB3" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="697.0" layoutY="565.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorB4" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="299.0" layoutY="363.0" mnemonicParsing="false" onAction="#ation">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorA1" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" />
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="607.0" layoutY="363.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fx:id="imageVIewVencedorA2" fitHeight="56.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Button>
+      <Label fx:id="label1a" layoutX="51.0" layoutY="70.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2b" layoutX="51.0" layoutY="90.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1c" layoutX="51.0" layoutY="274.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2d" layoutX="51.0" layoutY="294.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1e" layoutX="51.0" layoutY="475.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2f" layoutX="51.0" layoutY="495.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1g" layoutX="51.0" layoutY="679.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2h" layoutX="51.0" layoutY="699.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC1" layoutX="142.0" layoutY="145.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC2" layoutX="142.0" layoutY="221.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC3" layoutX="142.0" layoutY="549.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC4" layoutX="142.0" layoutY="625.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC5" layoutX="804.0" layoutY="140.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC6" layoutX="804.0" layoutY="216.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC7" layoutX="804.0" layoutY="549.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorC8" layoutX="804.0" layoutY="625.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorA2" layoutX="706.0" layoutY="385.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorB3" layoutX="627.0" layoutY="183.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorB4" layoutX="627.0" layoutY="587.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1b" layoutX="894.0" layoutY="70.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2a" layoutX="894.0" layoutY="90.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1d" layoutX="894.0" layoutY="273.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2c" layoutX="894.0" layoutY="293.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1f" layoutX="894.0" layoutY="475.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2e" layoutX="894.0" layoutY="495.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1h" layoutX="894.0" layoutY="679.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2g" layoutX="894.0" layoutY="699.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorB1" layoutX="318.0" layoutY="183.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorB2" layoutX="318.0" layoutY="587.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelVencedorA1" layoutX="240.0" layoutY="385.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fixCampea" layoutX="456.0" layoutY="305.0" text="Campeã">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageVIewVencedor" fitHeight="112.0" fitWidth="160.0" layoutX="420.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="labelVencedor" layoutX="471.0" layoutY="465.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

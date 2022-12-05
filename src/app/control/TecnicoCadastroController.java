@@ -2,11 +2,19 @@ package app.control;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import app.Main;
+import app.model.Selecao;
+import app.model.SelecaoDao;
+import app.model.Tecnico;
+import app.model.TecnicoDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class TecnicoCadastroController {
 
@@ -23,7 +31,7 @@ public class TecnicoCadastroController {
     private Button buttonConfirmar;
 
     @FXML
-    private ComboBox<?> comboBoxSelecao;
+    private ComboBox<Selecao> comboBoxSelecao;
 
     @FXML
     private TextField textFieldNacionalidade;
@@ -31,24 +39,83 @@ public class TecnicoCadastroController {
     @FXML
     private TextField textFieldNome;
 
-    @FXML
-    void ActionConfirmar(ActionEvent event) {
+	private boolean clicou = false;
+	private Tecnico tecnico;
+	private Stage tecnicoAdd;
+	
+	TecnicoDao tecnicos;
+	SelecaoDao selecoes;
 
-    }
+	public TecnicoCadastroController() {
+		tecnicoAdd = new Stage();
+	}
 
-    @FXML
-    void actionCancelar(ActionEvent event) {
+	public boolean isClicou() {
+		return clicou;
+	}
 
-    }
+	public void setClicou(boolean clicou) {
+		this.clicou = clicou;
+	}
 
-    @FXML
-    void initialize() {
-        assert buttonCancelar != null : "fx:id=\"buttonCancelar\" was not injected: check your FXML file 'TecnicoCadastro.fxml'.";
-        assert buttonConfirmar != null : "fx:id=\"buttonConfirmar\" was not injected: check your FXML file 'TecnicoCadastro.fxml'.";
-        assert comboBoxSelecao != null : "fx:id=\"comboBoxSelecao\" was not injected: check your FXML file 'TecnicoCadastro.fxml'.";
-        assert textFieldNacionalidade != null : "fx:id=\"textFieldNacionalidade\" was not injected: check your FXML file 'TecnicoCadastro.fxml'.";
-        assert textFieldNome != null : "fx:id=\"textFieldNome\" was not injected: check your FXML file 'TecnicoCadastro.fxml'.";
+	public Stage getTecnicoAdd() {
+		return tecnicoAdd;
+	}
 
-    }
+	public void setTecnicoAdd(Stage tecnicoAdd) {
+		this.tecnicoAdd = tecnicoAdd;
+	}
+
+	public Tecnico getTecnico() {
+		return tecnico;
+	}
+
+	public void setTecnico(Tecnico tecnico) {
+		this.tecnico = tecnico;
+		if (tecnico != null) {
+			this.textFieldNome.setText(tecnico.getNome());
+			this.textFieldNacionalidade.setText(tecnico.getNacionalidade());
+			selecoes = Main.getSelecoes();
+			String selecao = tecnico.getSelecao();
+			this.comboBoxSelecao.setValue(selecoes.buscaNome(selecao)); 
+			
+		}
+	}
+
+
+	@FXML
+	void actionConfirmar(ActionEvent event) {
+		if (validacao()) {
+			this.tecnico.setNome(textFieldNome.getText());
+			this.tecnico.setNacionalidade(textFieldNacionalidade.getText());
+			this.clicou = true;
+			this.tecnicoAdd.close();
+		}
+	}
+
+	@FXML
+	void actionCancelar(ActionEvent event) {
+		this.tecnicoAdd.close();
+	}
+
+	@FXML
+	void initialize() {
+		SelecaoDao selecoes = Main.getSelecoes();
+		comboBoxSelecao.getItems().addAll(selecoes.getSelecoes());
+	}
+
+	private boolean validacao() {
+		if (textFieldNome.getText() == null || textFieldNome.getText().isEmpty()) {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setContentText("Campo nome está vazio, por favor preencha. \n");
+			alert.show();
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	public void setArbitro(Stage telaCadastro) {		
+	}
 
 }

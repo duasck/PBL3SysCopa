@@ -2,6 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
+.Copy-of-Pastel-1-hex { -fx-background-color: #F1F7BB; }
+
+.Copy-of-Pastel-2-hex { -fx-background-color: #C0F6E7; }
+
+.Copy-of-Pastel-3-hex { -fx-background-color: #4B8798; }
+
+.Copy-of-Pastel-4-hex { -fx-background-color: #B2DEFF; }
+
+.Copy-of-Pastel-5-hex { -fx-background-color: #D6F6FF; }
 .bg{
 	
 	-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #7af2ff 0.0%, #ffffff 100.0%)
@@ -9,11 +18,11 @@
 }
 
 .color{
-	-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 5.0% , center 50.0% 50.0%, radius 100.0%, #14c3a2 0.0%, #000000 100.0%)
+	-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 5.0% , center 50.0% 50.0%, radius 100.0%, #C0F6E7 0.0%, #4B8798 100.0%)
 }
 
 .buttonColo{
-	-fx-background-color: #b8fd99;
+	-fx-background-color: #f8ff6e;
 }
 
 .fonte{

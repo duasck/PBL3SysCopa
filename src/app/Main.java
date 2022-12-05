@@ -33,19 +33,21 @@ public class Main extends Application {
 	private static Scene partidaView;
 	private static Scene tecnicoView;
 	private static Scene pesquisaView;
+	private static Scene mataMataView;
 	static JogadorDao jogadores;
 	static ArbitroDao arbitros;
 	static GrupoDao grupos;
 	static PartidaDao partidas;
 	static SelecaoDao selecoes;
 	static TecnicoDao tecnicos;
-	
 
 	@SuppressWarnings("exports")
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			carregarDados();
+			// MockarValores.MockSelecoes();
+			// MockarValores.MockTecnicos();
 			stage = primaryStage;
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("SysCopa");
@@ -63,29 +65,35 @@ public class Main extends Application {
 			jogadorView = new Scene(jogador);
 			jogadorView.getStylesheets().add(css);
 
+			
 			Parent selecao = FXMLLoader.load(getClass().getResource("view/SelecaoView.fxml"));
 			selecaoView = new Scene(selecao);
 			selecaoView.getStylesheets().add(css);
 
-			Parent arbitro = FXMLLoader.load(getClass().getResource("view/TelaPrincipal.fxml"));
+			Parent arbitro = FXMLLoader.load(getClass().getResource("view/ArbitroView.fxml"));
 			arbitroView = new Scene(arbitro);
 			arbitroView.getStylesheets().add(css);
 
-			Parent grupo = FXMLLoader.load(getClass().getResource("view/TelaPrincipal.fxml"));
+			Parent grupo = FXMLLoader.load(getClass().getResource("view/GrupoView.fxml"));
 			grupoView = new Scene(grupo);
 			grupoView.getStylesheets().add(css);
 
-			Parent partida = FXMLLoader.load(getClass().getResource("view/TelaPrincipal.fxml"));
+			Parent partida = FXMLLoader.load(getClass().getResource("view/PartidaView.fxml"));
 			partidaView = new Scene(partida);
 			partidaView.getStylesheets().add(css);
 
-			Parent tecnico = FXMLLoader.load(getClass().getResource("view/TelaPrincipal.fxml"));
+			Parent tecnico = FXMLLoader.load(getClass().getResource("view/TecnicoView.fxml"));
 			tecnicoView = new Scene(tecnico);
 			tecnicoView.getStylesheets().add(css);
 
-			Parent pesquisa = FXMLLoader.load(getClass().getResource("view/TelaPrincipal.fxml"));
+			Parent pesquisa = FXMLLoader.load(getClass().getResource("view/PesquisaView.fxml"));
 			pesquisaView = new Scene(pesquisa);
 			pesquisaView.getStylesheets().add(css);
+			
+			Parent mataMata = FXMLLoader.load(getClass().getResource("view/MataMataView.fxml"));
+			mataMataView = new Scene(mataMata);
+			mataMataView.getStylesheets().add(css);
+			
 
 			primaryStage.setScene(telaPrincipalView);
 			primaryStage.show();
@@ -108,6 +116,38 @@ public class Main extends Application {
 		jogadores = new JogadorDao();
 		arbitros = new ArbitroDao();
 		grupos = new GrupoDao();
+	}
+
+	/**
+	 * @param tela troca a tela
+	 */
+	public static void trocarTela(String tela) {
+		switch (tela) {
+		case "principal":
+			stage.setScene(telaPrincipalView);
+			break;
+		case "jogador":
+			stage.setScene(jogadorView);
+			break;
+		case "selecao":
+			stage.setScene(selecaoView);
+			break;
+		case "tecnico":
+			stage.setScene(tecnicoView);
+			break;
+		case "arbitro":
+			stage.setScene(arbitroView);
+			break;
+		case "grupo":
+			stage.setScene(grupoView);
+			break;
+		case "pesquisa":
+			stage.setScene(pesquisaView);
+			break;
+		case "partida":
+			stage.setScene(partidaView);
+			break;
+		}
 	}
 	
 	@SuppressWarnings("exports")
@@ -170,36 +210,13 @@ public class Main extends Application {
 		Main.tecnicos = tecnicos;
 	}
 
-	/**
-	 * @param tela
-	 * troca a tela
-	 */
-	public static void trocarTela(String tela) {
-		switch (tela) {
-		case "principal":
-			stage.setScene(telaPrincipalView);
-			break;
-		case "jogador":
-			stage.setScene(jogadorView);
-			break;
-		case "selecao":
-			stage.setScene(selecaoView);
-			break;
-		case "tecnico":
-			stage.setScene(tecnicoView);
-			break;
-		case "arbitro":
-			stage.setScene(arbitroView);
-			break;
-		case "grupo":
-			stage.setScene(grupoView);
-			break;
-		case "pesquisa":
-			stage.setScene(pesquisaView);
-			break;
-		case "partida":
-			stage.setScene(partidaView);
-			break;
-		}
+	@SuppressWarnings("exports")
+	public static Scene getMataMataView() {
+		return mataMataView;
+	}
+
+	@SuppressWarnings("exports")
+	public static void setMataMataView(Scene mataMataView) {
+		Main.mataMataView = mataMataView;
 	}
 }

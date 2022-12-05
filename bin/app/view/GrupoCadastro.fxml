@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,9 +12,10 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.control.GrupoCadastroController">
+<AnchorPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #4B8798;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.control.GrupoCadastroController">
    <children>
       <HBox alignment="CENTER" layoutY="40.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
          <children>
@@ -21,8 +23,15 @@
                <image>
                   <Image url="@../resources/Grupo%2064x.png" />
                </image>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </ImageView>
-            <Label text="Cadastro Grupo">
+            <Label text="Cadastro Grupo" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
@@ -42,27 +51,27 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Nome">
+            <Label text="Nome" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="10.0" layoutY="26.0" text="Selecao 3" GridPane.rowIndex="3">
+            <Label layoutX="10.0" layoutY="26.0" text="Seleção 3" textFill="WHITE" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="Selecao 1" GridPane.rowIndex="1">
+            <Label text="Seleção 1" textFill="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="Selecao 4" GridPane.rowIndex="4">
+            <Label text="Seleção 4" textFill="WHITE" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="Selecao 2" GridPane.rowIndex="2">
+            <Label text="Seleção 2" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
@@ -78,7 +87,7 @@
             <ComboBox fx:id="comboBoxSelecao4" prefHeight="30.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Button fx:id="buttonConfirmar" layoutX="20.0" layoutY="395.0" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#ActionConfirmar" prefHeight="30.0" prefWidth="150.0" text="Confirmar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="210.0">
+      <Button fx:id="buttonConfirmar" layoutX="20.0" layoutY="395.0" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#actionConfirmar" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #F1F7BB;" text="Confirmar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="210.0">
          <font>
             <Font size="15.0" />
          </font>
@@ -90,7 +99,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="buttonCancelar" layoutX="150.0" layoutY="395.0" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#actionCancelar" prefHeight="30.0" prefWidth="150.0" text="Cancelar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="30.0">
+      <Button fx:id="buttonCancelar" layoutX="150.0" layoutY="395.0" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#actionCancelar" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #F1F7BB;" text="Cancelar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="30.0">
          <font>
             <Font size="15.0" />
          </font>

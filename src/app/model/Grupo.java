@@ -10,7 +10,8 @@ public class Grupo {
 	private Selecao time2;
 	private Selecao time3;
 	private Selecao time4;
-	
+	private String nome;
+
 	public Grupo() {
 		
 	}
@@ -21,7 +22,8 @@ public class Grupo {
 	 * @param time3
 	 * @param time4
 	 */
-	public Grupo(Selecao time1, Selecao time2, Selecao time3, Selecao time4) {
+	public Grupo(String nome, Selecao time1, Selecao time2, Selecao time3, Selecao time4) {
+		this.nome = nome;
 		this.time1 = time1;
 		this.time2 = time2;
 		this.time3 = time3;
@@ -59,4 +61,19 @@ public class Grupo {
 	public void setTime4(Selecao time4) {
 		this.time4 = time4;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	@Override
+	public String toString() {
+		return "Grupo " + this.nome;
+	}
+	
+
 }

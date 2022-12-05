@@ -2,6 +2,8 @@ package app.control;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import app.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class PesquisaController {
 
@@ -93,6 +96,15 @@ public class PesquisaController {
     @FXML
     private TextField textFieldPesquisa;
 
+    Stage tela;
+	public Stage getTela() {
+		return tela;
+	}
+
+	public void setTela(Stage tela) {
+		this.tela = tela;
+	}
+    
     @FXML
     void ActionAdd(ActionEvent event) {
 
@@ -110,7 +122,7 @@ public class PesquisaController {
 
     @FXML
     void actionVoltar(ActionEvent event) {
-
+    	Main.trocarTela("principal");
     }
 
     @FXML

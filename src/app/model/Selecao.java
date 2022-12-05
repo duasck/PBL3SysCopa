@@ -1,5 +1,6 @@
 package app.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,6 +22,7 @@ public class Selecao {
 	}
 
 	public Selecao(String nome) {
+		this.jogadores = new ArrayList<Jogador>();
 		this.nome = nome;
 		this.grupo = false;
 		this.gols = 0;

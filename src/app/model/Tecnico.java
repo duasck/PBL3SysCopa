@@ -12,6 +12,12 @@ public class Tecnico {
 
 	public Tecnico() {
 	}
+	
+	public Tecnico(String nome, String selecao) {
+		this.nome = nome;
+		this.selecao = selecao;
+		this.nacionalidade = "não definido";
+	}
 
 	public Tecnico(String nacionalidade, String selecao, String nome) {
 		this.nacionalidade = nacionalidade;

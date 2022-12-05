@@ -46,6 +46,9 @@ public class JogadorController {
 	private Button buttonEdit;
 
 	@FXML
+	private Button buttonAtt;
+
+	@FXML
 	private Label cartaoAmarelo;
 
 	@FXML
@@ -111,13 +114,18 @@ public class JogadorController {
 	SelecaoDao selecoes;
 
 	@FXML
+	void actionAtt(ActionEvent event) {
+		carregarTabela();
+	}
+
+	@FXML
 	void ActionAdd(ActionEvent event) throws IOException {
 		Jogador jogador = new Jogador();
 		boolean confirmou = cadastrarJogador(jogador);
 		if (confirmou) {
 			jogadores = Main.getJogadores();
 			selecoes = Main.getSelecoes();
-			if(selecoes.existe(jogador.getSelecao())) {
+			if (selecoes.existe(jogador.getSelecao())) {
 				Selecao editar = selecoes.buscaNome(jogador.getSelecao());
 				selecoes.excluir(editar);
 				editar.getJogadores().add(jogador);
@@ -151,16 +159,13 @@ public class JogadorController {
 	void actionEdit(ActionEvent event) throws IOException {
 		Jogador jogador = tableViewJogador.getSelectionModel().getSelectedItem();
 		Jogador excluir = tableViewJogador.getSelectionModel().getSelectedItem();
-
 		if (jogador != null) {
 			boolean confirmou = editarJogador(jogador);
 			if (confirmou) {
 				jogadores = Main.getJogadores();
 				selecoes = Main.getSelecoes();
-
 				jogadores.excluir(excluir);
 				jogadores.create(jogador);
-
 				if (selecoes.existe(jogador.getSelecao())) {
 					selecoes.apagarJogador(excluir);
 					selecoes.addJogador(jogador);
@@ -182,24 +187,15 @@ public class JogadorController {
 
 	@FXML
 	void initialize() {
-		Jogador j1 = new Jogador("Neymar", "Atacante", 10, "Brasil", 100);
-		Jogador j2 = new Jogador("Diego", "Goleiro", 1, "Brasil", 200);
-		Selecao s1 = new Selecao("Brasil", "Tite", null);
-		SelecaoDao selecoes = Main.getSelecoes();
-		selecoes.create(s1);
-		jogadores = Main.getJogadores();
-		jogadores.create(j2);
-		jogadores.create(j1);
-
 		carregarTabela();
 		tableColumnCodigo.setCellValueFactory(new PropertyValueFactory<Jogador, String>("codJog"));
 		tableColumnNome.setCellValueFactory(new PropertyValueFactory<Jogador, String>("nome"));
 		tableViewJogador.getSelectionModel().selectedItemProperty()
 				.addListener((observable, oldValue, newValue) -> selecionar(newValue));
-
 	}
 
 	public void carregarTabela() {
+		jogadores = Main.getJogadores();
 		obsJogadores = FXCollections.observableArrayList(jogadores.getJogadores());
 		tableViewJogador.setItems(obsJogadores);
 	}
@@ -241,7 +237,6 @@ public class JogadorController {
 		controller.setJogadorAdd(telaCadastro);
 		controller.setJogador(jogador);
 		telaCadastro.showAndWait();
-
 		return controller.isClicou();
 	}
 
@@ -262,7 +257,6 @@ public class JogadorController {
 		controller.textFieldVermelho.setDisable(false);
 		controller.textFieldGols.setDisable(false);
 		telaCadastro.showAndWait();
-
 		return controller.isClicou();
 	}
 

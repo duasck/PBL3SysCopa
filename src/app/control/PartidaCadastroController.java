@@ -59,16 +59,6 @@ public class PartidaCadastroController {
 
     @FXML
     void initialize() {
-        assert buttonCancelar != null : "fx:id=\"buttonCancelar\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert buttonConfirmar != null : "fx:id=\"buttonConfirmar\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert comboBoxGrupo != null : "fx:id=\"comboBoxGrupo\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert comboBoxSelecao1 != null : "fx:id=\"comboBoxSelecao1\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert comboBoxSelecao2 != null : "fx:id=\"comboBoxSelecao2\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert data != null : "fx:id=\"data\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert textFieldGolsSelecao1 != null : "fx:id=\"textFieldGolsSelecao1\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert textFieldGolsSelecao2 != null : "fx:id=\"textFieldGolsSelecao2\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert textFieldHorario != null : "fx:id=\"textFieldHorario\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
-        assert textFieldLocal != null : "fx:id=\"textFieldLocal\" was not injected: check your FXML file 'PartidaCadastro.fxml'.";
 
     }
 

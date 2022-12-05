@@ -1,13 +1,25 @@
 package app.control;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import app.Main;
+import app.model.Grupo;
+import app.model.GrupoDao;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class GrupoController {
 
@@ -30,13 +42,10 @@ public class GrupoController {
     private Button buttonEdit;
 
     @FXML
-    private Label grupo;
+    private Label labelGrupo;
 
     @FXML
     private Label grupoFix;
-
-    @FXML
-    private ListView<?> listViewGrupo;
 
     @FXML
     private Label selecao1;
@@ -64,46 +73,111 @@ public class GrupoController {
 
     @FXML
     private TextField textFiledPesquisa;
-
+    
     @FXML
-    void ActionAdd(ActionEvent event) {
+    private ListView<Grupo> listViewGrupo;
 
-    }
+	private ObservableList<Grupo> obsGrupos;
+	
+	GrupoDao grupos;
+    
+    
+	
+	@FXML
+	void actionAdd(ActionEvent event) throws IOException {
+		Grupo grupo = new Grupo();
+		boolean confirmou = cadastrarGrupo(grupo);
+		if (confirmou) {
+			grupos = Main.getGrupos();
+			grupos.create(grupo);
+			carregarListView();
+		}
+	}
 
-    @FXML
-    void actionDelete(ActionEvent event) {
+	@FXML
+	void actionDelete(ActionEvent event) {
+		Grupo grupo = listViewGrupo.getSelectionModel().getSelectedItem();
+		if (grupo != null) {
+			grupos = Main.getGrupos();
+			grupos.excluir(grupo);
+			carregarListView();
+		} else {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setContentText("Escolha um grupo clicando na tabela! ");
+			alert.show();
+			carregarListView();
+		}
+	}
 
-    }
-
-    @FXML
-    void actionEdit(ActionEvent event) {
-
-    }
+	@FXML
+	void actionEdit(ActionEvent event) throws IOException {
+		Grupo grupo = listViewGrupo.getSelectionModel().getSelectedItem();
+		Grupo excluir = listViewGrupo.getSelectionModel().getSelectedItem();
+		if (grupo != null) {
+			boolean confirmou = cadastrarGrupo(grupo);
+			if (confirmou) {
+				grupos = Main.getGrupos();
+				grupos.excluir(excluir);
+				grupos.create(grupo);
+				carregarListView();
+			}
+		} else {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setContentText("Escolha um grupo clicando na tabela! ");
+			alert.show();
+		}
+	}
 
     @FXML
     void actionVoltar(ActionEvent event) {
-
+    	Main.trocarTela("principal");
     }
 
     @FXML
     void initialize() {
-        assert buttonAdd != null : "fx:id=\"buttonAdd\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert buttonBack != null : "fx:id=\"buttonBack\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert buttonDel != null : "fx:id=\"buttonDel\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert buttonEdit != null : "fx:id=\"buttonEdit\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert grupo != null : "fx:id=\"grupo\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert grupoFix != null : "fx:id=\"grupoFix\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert listViewGrupo != null : "fx:id=\"listViewGrupo\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecao1 != null : "fx:id=\"selecao1\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecao1Fix != null : "fx:id=\"selecao1Fix\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecao2 != null : "fx:id=\"selecao2\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecao2Fix != null : "fx:id=\"selecao2Fix\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecao3 != null : "fx:id=\"selecao3\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecao4 != null : "fx:id=\"selecao4\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecaoFix3 != null : "fx:id=\"selecaoFix3\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert selecaoFix4 != null : "fx:id=\"selecaoFix4\" was not injected: check your FXML file 'GrupoView.fxml'.";
-        assert textFiledPesquisa != null : "fx:id=\"textFiledPesquisa\" was not injected: check your FXML file 'GrupoView.fxml'.";
+		carregarListView();
+		listViewGrupo.getSelectionModel().selectedItemProperty()
+				.addListener((observable, oldValue, newValue) -> selecionar(newValue));
 
-    }
+	}
+
+    public void selecionar(Grupo grupo) {
+		if (grupo == null) {
+			labelGrupo.setText("");
+			selecao1.setText("");
+			selecao2.setText("");
+			selecao3.setText("");
+			selecao4.setText("");
+		} else {
+			labelGrupo.setText(grupo.getNome());
+			selecao1.setText(grupo.getTime1().getNome());
+			selecao2.setText(grupo.getTime2().getNome());
+			selecao3.setText(grupo.getTime3().getNome());
+			selecao4.setText(grupo.getTime4().getNome());
+		}
+	}
+
+	public void carregarListView() {
+		grupos = Main.getGrupos();
+		obsGrupos = FXCollections.observableArrayList(grupos.getGrupos());
+		listViewGrupo.setItems(obsGrupos);
+	}
+
+	public boolean cadastrarGrupo(Grupo grupo) throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(GrupoCadastroController.class.getResource("/app/view/GrupoCadastro.fxml"));
+		AnchorPane page = (AnchorPane) loader.load();
+		Stage telaCadastro = new Stage();
+		telaCadastro.setTitle("Cadastro grupo");
+		Image iconApp = new Image(getClass().getResourceAsStream("/app/resources/Grupo300x.png"));
+		telaCadastro.getIcons().add(iconApp);
+		Scene scene = new Scene(page);
+		telaCadastro.setScene(scene);
+		GrupoCadastroController controller = loader.getController();
+		controller.setGrupoAdd(telaCadastro);
+		controller.setGrupo(grupo);
+		telaCadastro.showAndWait();
+		return controller.isClicou();
+	}
 
 }

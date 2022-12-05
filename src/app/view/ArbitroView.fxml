@@ -61,10 +61,10 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <GridPane prefHeight="242.0" prefWidth="476.0" AnchorPane.bottomAnchor="372.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                        <GridPane layoutY="292.0" prefHeight="136.0" prefWidth="456.0" AnchorPane.bottomAnchor="239.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="239.0">
                           <columnConstraints>
-                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="153.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="343.0" />
+                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="136.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="320.0" />
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints maxHeight="194.0" minHeight="50.0" prefHeight="88.0" vgrow="SOMETIMES" />
@@ -99,7 +99,7 @@
             </SplitPane>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" spacing="20.0">
                <children>
-                  <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#ActionAdd" prefHeight="35.0" prefWidth="200.0" text="Inserir">
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#actionAdd" prefHeight="35.0" prefWidth="200.0" text="Inserir">
                      <font>
                         <Font size="18.0" />
                      </font>

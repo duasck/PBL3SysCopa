@@ -21,6 +21,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import app.model.SelecaoDao;
@@ -38,6 +39,9 @@ public class SelecaoController {
 	private URL location;
 
 	@FXML
+	private ImageView imageViewSelecao;
+
+	@FXML
 	private Button buttonAdd;
 
 	@FXML
@@ -48,6 +52,9 @@ public class SelecaoController {
 
 	@FXML
 	private Button buttonEdit;
+
+	@FXML
+	private Button buttonAtt;
 
 	@FXML
 	private ComboBox<Selecao> comboBoxSelecao;
@@ -80,6 +87,11 @@ public class SelecaoController {
 	private ObservableList<Jogador> obsJogador;
 	SelecaoDao selecoes;
 	JogadorDao jogadores;
+
+	@FXML
+	void actionAtt(ActionEvent event) {
+		carregarListView();
+	}
 
 	@FXML
 	void actionAdd(ActionEvent event) throws IOException {
@@ -130,6 +142,8 @@ public class SelecaoController {
 	@FXML
 	void actionVoltar(ActionEvent event) {
 		Main.trocarTela("principal");
+//		Stage tela = (Stage) buttonBack.getScene().getWindow(); // Obtendo a janela atual
+//		tela.close(); // Fechando o Stage
 	}
 
 	@FXML
@@ -147,12 +161,6 @@ public class SelecaoController {
 		listJogadores.add(j2);
 		listJogadores.add(j1);
 
-		Selecao s1 = new Selecao("Brasil", "Tite", listJogadores);
-		Selecao s2 = new Selecao("Argentina", "Boludo", null);
-		selecoes = Main.getSelecoes();
-		selecoes.create(s2);
-		selecoes.create(s1);
-
 		carregarListView();
 		listViewSelecao.getSelectionModel().selectedItemProperty()
 				.addListener((observable, oldValue, newValue) -> selecionar(newValue));
@@ -168,6 +176,16 @@ public class SelecaoController {
 			labelGols.setText("");
 			labelTecnico.setText("");
 		} else {
+			if (selecoes.existe(selecao.getNome())) {
+				try {
+					String caminho = "/app/resources/imgSelecoes/" + selecao.getNome() + ".png";
+					Image imgSelecao = new Image(getClass().getResourceAsStream(caminho));
+					imageViewSelecao.setImage(imgSelecao);
+					imageViewSelecao.setPreserveRatio(false);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
 			if (selecao.getNome() != null) {
 				labelNome.setText(selecao.getNome());
 			}
@@ -184,7 +202,8 @@ public class SelecaoController {
 	}
 
 	public void carregarListView() {
-		obsSelecao = FXCollections.observableArrayList(selecoes.getSelecoes());
+		selecoes = Main.getSelecoes();
+		obsSelecao = FXCollections.observableArrayList(selecoes.getSelecoes()).sorted();
 		listViewSelecao.setItems(obsSelecao);
 	}
 
